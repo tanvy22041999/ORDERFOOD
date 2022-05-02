@@ -8,6 +8,4 @@ import org.springframework.web.multipart.MultipartFile;
 @Setter
 public class ChefDTO {
     private String chefName;
-
-    private MultipartFile img;
 }

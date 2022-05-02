@@ -9,6 +9,7 @@ import com.spring.food.entities.Chef;
 import com.spring.food.repositories.ChefRepository.ChefRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Map;
@@ -25,19 +26,24 @@ public class ChefServiceImpl implements ChefService{
     @Autowired
     private MessageManager messageManager;
     private String logicCheckCreate(ChefDTO chef){
-        if(chef.getChefName() == null || "".equals(chef.getChefName())){
+        if(chef.getChefName() == null || "".equals(chef.getChefName())) {
             return messageManager.getMessage("ERR0007", null);
         }
-        if(chef.getImg() != null){
+        return "";
+    }
+
+    private String logicCheckUpload(MultipartFile image){
+        if(image != null){
             for(String type : SystemConstants.IMG_PNG){
-                if(type.equals(chef.getImg().getContentType())){
+                if(type.equals(image.getContentType())){
                     return "";
                 }
             }
             return messageManager.getMessage("ERR0008", null);
         }
-
-        return "";
+        else {
+            return messageManager.getMessage("ERR0017", null);
+        }
     }
 
     private String logicCheckUpdate(String chefId, ChefDTO chef){
@@ -75,17 +81,27 @@ public class ChefServiceImpl implements ChefService{
 
             Chef chefSave = new Chef();
             chefSave.setChefName(chef.getChefName());
-            if(chef.getImg() != null){
-                Map uploadResult = cloudinaryService.uploadImageProduct(chef.getImg());
-
-                if(uploadResult == null){
-                    result.setMessageError(messageManager.getMessage("ERR0009", null));
-                    return result;
-                }
-
-                chefSave.setImg(uploadResult.get("url").toString());
-                chefSave.setCloud_id(uploadResult.get("public_id").toString());
-            }
+//            if(chef.getImg() != null){
+//                Map uploadResult = cloudinaryService.uploadImageProduct(chef.getImg());
+//
+//                if(uploadResult == null){
+//                    result.setMessageError(messageManager.getMessage("ERR0009", null));
+//                    return result;
+//                }
+//
+//                chefSave.setImg(uploadResult.get("url").toString());
+//                chefSave.setCloud_id(uploadResult.get("public_id").toString());
+//            }if(chef.getImg() != null){
+//                Map uploadResult = cloudinaryService.uploadImageProduct(chef.getImg());
+//
+//                if(uploadResult == null){
+//                    result.setMessageError(messageManager.getMessage("ERR0009", null));
+//                    return result;
+//                }
+//
+//                chefSave.setImg(uploadResult.get("url").toString());
+//                chefSave.setCloud_id(uploadResult.get("public_id").toString());
+//            }
 
             Chef chefSaved = chefRepository.save(chefSave);
             if(chefSaved != null){
@@ -93,6 +109,38 @@ public class ChefServiceImpl implements ChefService{
             }
         }catch (Exception ex){
             result.setMessageError(messageManager.getMessage("ERR0000", null));
+        }
+        return result;
+    }
+
+    @Override
+    public ServiceResponse<Chef> uploadImage(String chefId, MultipartFile image) {
+        ServiceResponse<Chef> result = new ServiceResponse<>();
+
+        String error = this.logicCheckUpload(image);
+
+        if(!"".equals(error)){
+            result.setMessageError(error);
+            return  result;
+        }
+
+        Optional<Chef> chefOptional = chefRepository.findById(chefId);
+        if(!chefOptional.isPresent()){
+            result.setMessageError(messageManager.getMessage("ERR0006", null));
+        }
+        else {
+            Chef chefFound = chefOptional.get();
+            Map uploadResult = cloudinaryService.uploadImageProduct(image);
+
+            if(uploadResult == null){
+                result.setMessageError(messageManager.getMessage("ERR0009", null));
+                return result;
+            }
+
+            chefFound.setImg(uploadResult.get("url").toString());
+            chefFound.setCloud_id(uploadResult.get("public_id").toString());
+            chefRepository.save(chefFound);
+            result.setData(chefFound);
         }
         return result;
     }

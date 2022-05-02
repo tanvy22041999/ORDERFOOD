@@ -9,6 +9,7 @@ import com.spring.food.services.ChefService.ChefService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/rest")
@@ -17,10 +18,16 @@ public class ChefController {
     private ChefService chefService;
 
     @PostMapping(value = "/admin/chef/add-new")
-    public ResponseEntity<ResponseData> addNew(@ModelAttribute() ChefDTO chef){
+    public ResponseEntity<ResponseData> addNew(@RequestBody() ChefDTO chef){
 
         ServiceResponse<Chef> resultSave = chefService.createChef(chef);
         return ResponseUtils.getResponse(resultSave);
+    }
+
+    @PostMapping(value="admin/chef/image/upload/{id}")
+    public ResponseEntity<ResponseData> uploadImage(@PathVariable("id") String chefId, @RequestParam MultipartFile image){
+        ServiceResponse<Chef> resultUpload = chefService.uploadImage(chefId, image);
+        return ResponseUtils.getResponse(resultUpload);
     }
 
     @PutMapping("/admin/chef/update/{id}")
