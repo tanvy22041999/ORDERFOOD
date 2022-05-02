@@ -12,4 +12,7 @@ import java.util.List;
 public interface FoodRepository extends MongoRepository<Food, String> {
     @Query(value = "{ 'foodName' : { $regex: ?0, $options: 'i' }, 'delFlg' : false}", sort = "{'foodName': -1}")
     List<Food> findTypeByNameNear(String typeName);
+
+    @Query(value = "{'delFlg' : false}", sort = "{'createDate': -1}")
+    List<Food> fetchAll();
 }

@@ -23,14 +23,14 @@ public class TypeController {
         return ResponseUtils.getResponse(resultSave);
     }
 
-    @PostMapping("/admin/type/update/{id}")
+    @PutMapping("/admin/type/update/{id}")
     public  ResponseEntity<ResponseData> updateType(@PathVariable("id") String typeId, @RequestBody() TypeDTO type){
         ServiceResponse<Type> resultUpdate = typeService.updateFoodType(typeId, type);
 
         return ResponseUtils.getResponse(resultUpdate);
     }
 
-    @PostMapping("/admin/type/delete/{id}")
+    @DeleteMapping("/admin/type/delete/{id}")
     public  ResponseEntity<ResponseData> deleteType(@PathVariable("id") String typeId){
         ServiceResponse<Type> resultDelete = typeService.deleteFoodType(typeId);
         return ResponseUtils.getResponse(resultDelete);

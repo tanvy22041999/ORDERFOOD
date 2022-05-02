@@ -23,13 +23,13 @@ public class ChefController {
         return ResponseUtils.getResponse(resultSave);
     }
 
-    @PostMapping("/admin/chef/update/{id}")
+    @PutMapping("/admin/chef/update/{id}")
     public  ResponseEntity<ResponseData> update(@PathVariable("id") String chefId, @RequestBody() ChefDTO chef){
         ServiceResponse<Chef> resultUpdate = chefService.updateChef(chefId, chef);
         return ResponseUtils.getResponse(resultUpdate);
     }
 
-    @PostMapping("/admin/chef/delete/{id}")
+    @DeleteMapping("/admin/chef/delete/{id}")
     public  ResponseEntity<ResponseData> delete(@PathVariable("id") String chefId){
         ServiceResponse<Chef> resultDelete = chefService.deleteChef(chefId);
         return ResponseUtils.getResponse(resultDelete);

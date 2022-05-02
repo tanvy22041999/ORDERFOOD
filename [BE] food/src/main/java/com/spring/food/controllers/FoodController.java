@@ -23,13 +23,13 @@ public class FoodController {
         return ResponseUtils.getResponse(resultSave);
     }
 
-    @PostMapping("/admin/food/update/{id}")
+    @PutMapping("/admin/food/update/{id}")
     public  ResponseEntity<ResponseData> update(@PathVariable("id") String foodId, @ModelAttribute() FoodDTO food){
         ServiceResponse<Food> resultUpdate = foodService.update(foodId, food);
         return ResponseUtils.getResponse(resultUpdate);
     }
 
-    @PostMapping("/admin/food/delete/{id}")
+    @DeleteMapping("/admin/food/delete/{id}")
     public  ResponseEntity<ResponseData> delete(@PathVariable("id") String foodId){
         ServiceResponse<Food> resultDelete = foodService.delete(foodId);
         return ResponseUtils.getResponse(resultDelete);

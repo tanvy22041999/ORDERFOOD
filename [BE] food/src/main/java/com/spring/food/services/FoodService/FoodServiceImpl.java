@@ -5,6 +5,7 @@ import com.spring.food.commons.MessageManager;
 import com.spring.food.comstants.SystemConstants;
 import com.spring.food.dtos.FoodDTO;
 import com.spring.food.dtos.ServiceResponse;
+import com.spring.food.entities.Chef;
 import com.spring.food.entities.Food;
 import com.spring.food.repositories.ChefRepository.ChefRepository;
 import com.spring.food.repositories.FoodRepository.FoodRepository;
@@ -12,6 +13,7 @@ import com.spring.food.repositories.TypeRepository.TypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -195,7 +197,14 @@ public class FoodServiceImpl implements FoodService{
 
     @Override
     public ServiceResponse<Object> fetchAll() {
-        return null;
+        ServiceResponse<Object> result = new ServiceResponse<>();
+        try{
+            List<Food> chefs = foodRepository.fetchAll();
+            result.setData(chefs);
+        }catch (Exception ex) {
+            result.setMessageError(messageManager.getMessage("ERR0000", null));
+        }
+        return result;
     }
 
     @Override
