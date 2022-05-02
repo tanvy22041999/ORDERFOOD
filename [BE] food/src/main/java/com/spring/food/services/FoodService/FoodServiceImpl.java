@@ -81,6 +81,13 @@ public class FoodServiceImpl implements FoodService{
         return logicCheckCreate(food, true);
     }
 
+    private String logicCheckDelete(String foodId){
+        if(!foodRepository.existsById(foodId)){
+            return  messageManager.getMessage("ERROOO6", null);
+        }
+        return "";
+    }
+
     @Override
     public ServiceResponse<Food> addNew(FoodDTO food) {
         ServiceResponse<Food> result = new ServiceResponse<>();
@@ -163,7 +170,27 @@ public class FoodServiceImpl implements FoodService{
 
     @Override
     public ServiceResponse<Food> delete(String foodId) {
-        return null;
+        ServiceResponse<Food> result = new ServiceResponse<>();
+
+        try{
+            String error = this.logicCheckDelete(foodId);
+            if(!"".equals(error)){
+                result.setMessageError(error);
+                return result;
+            }
+
+            Optional<Food> food = foodRepository.findById(foodId);
+            Food foodDelete = food.get();
+            foodDelete.setDelFlg(SystemConstants.DEL_FLG_ON);
+            Food foodDeleted = foodRepository.save(foodDelete);
+            if(foodDeleted != null){
+                result.setData(foodDeleted);
+            }
+        }
+        catch (Exception ex){
+            result.setMessageError(messageManager.getMessage("ERR0000", null));
+        }
+        return result;
     }
 
     @Override
