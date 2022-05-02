@@ -24,7 +24,7 @@ public class FoodController {
     }
 
     @PostMapping("/admin/food/update/{id}")
-    public  ResponseEntity<ResponseData> update(@PathVariable("id") String foodId, @RequestBody() FoodDTO food){
+    public  ResponseEntity<ResponseData> update(@PathVariable("id") String foodId, @ModelAttribute() FoodDTO food){
         ServiceResponse<Food> resultUpdate = foodService.update(foodId, food);
         return ResponseUtils.getResponse(resultUpdate);
     }

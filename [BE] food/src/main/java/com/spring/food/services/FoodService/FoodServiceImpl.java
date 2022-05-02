@@ -5,9 +5,7 @@ import com.spring.food.commons.MessageManager;
 import com.spring.food.comstants.SystemConstants;
 import com.spring.food.dtos.FoodDTO;
 import com.spring.food.dtos.ServiceResponse;
-import com.spring.food.entities.Chef;
 import com.spring.food.entities.Food;
-import com.spring.food.entities.Type;
 import com.spring.food.repositories.ChefRepository.ChefRepository;
 import com.spring.food.repositories.FoodRepository.FoodRepository;
 import com.spring.food.repositories.TypeRepository.TypeRepository;
@@ -15,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class FoodServiceImpl implements FoodService{
@@ -33,13 +32,15 @@ public class FoodServiceImpl implements FoodService{
     @Autowired
     private CloudinaryService cloudinaryService;
 
-    private String logicCheckCreate(FoodDTO food){
+    private String logicCheckCreate(FoodDTO food, boolean flgUpdate){
         if(food.getFoodName() == null || "".equals(food.getFoodName())){
             return messageManager.getMessage("ERR0010", null);
         }
 
-        if(foodRepository.findTypeByNameNear(food.getFoodName()).size() > 0){
-            return messageManager.getMessage("ERR0004", null);
+        if(!flgUpdate) {
+            if(foodRepository.findTypeByNameNear(food.getFoodName()).size() > 0){
+                return messageManager.getMessage("ERR0004", null);
+            }
         }
 
         if(food.getImage() != null){
@@ -72,12 +73,20 @@ public class FoodServiceImpl implements FoodService{
         return "";
     }
 
+    private String logicCheckUpdate(String foodId, FoodDTO food){
+        if(!foodRepository.existsById(foodId)){
+            return messageManager.getMessage("ERR0006", null);
+        }
+
+        return logicCheckCreate(food, true);
+    }
+
     @Override
     public ServiceResponse<Food> addNew(FoodDTO food) {
         ServiceResponse<Food> result = new ServiceResponse<>();
 
         try{
-            String error = this.logicCheckCreate(food);
+            String error = this.logicCheckCreate(food, false);
 
             if(!"".equals(error)){
                 result.setMessageError(error);
@@ -88,6 +97,7 @@ public class FoodServiceImpl implements FoodService{
             foodSave.setFoodName(food.getFoodName());
             foodSave.setTypeId(food.getTypeId());
             foodSave.setChefId(food.getChefId());
+            foodSave.setDescription(food.getDescription());
             if(food.getImage() != null){
                 Map uploadResult = cloudinaryService.uploadImageProduct(food.getImage());
 
@@ -100,9 +110,9 @@ public class FoodServiceImpl implements FoodService{
                 foodSave.setCloudId(uploadResult.get("public_id").toString());
             }
 
-            Food chefSaved = foodRepository.save(foodSave);
-            if(chefSaved != null){
-                result.setData(chefSaved);
+            Food foodSaved = foodRepository.save(foodSave);
+            if(foodSaved != null){
+                result.setData(foodSaved);
             }
         }catch (Exception ex){
             result.setMessageError(messageManager.getMessage("ERR0000", null));
@@ -112,7 +122,43 @@ public class FoodServiceImpl implements FoodService{
 
     @Override
     public ServiceResponse<Food> update(String foodId, FoodDTO food) {
-        return null;
+        ServiceResponse<Food> result = new ServiceResponse<>();
+
+        try{
+            String error = this.logicCheckUpdate(foodId, food);
+
+            if(!"".equals(error)){
+                result.setMessageError(error);
+                return  result;
+            }
+
+            Optional<Food> foodOptional = foodRepository.findById(foodId);
+            Food foodUpdate = foodOptional.get();
+            foodUpdate.setFoodName(food.getFoodName());
+            foodUpdate.setTypeId(food.getTypeId());
+            foodUpdate.setChefId(food.getChefId());
+            foodUpdate.setDescription(food.getDescription());
+            if(food.getImage() != null){
+                Map uploadResult = cloudinaryService.uploadImageProduct(food.getImage());
+
+                if(uploadResult == null){
+                    result.setMessageError(messageManager.getMessage("ERR0009", null));
+                    return result;
+                }
+                cloudinaryService.deleteImageProduct(foodUpdate.getCloudId());
+
+                foodUpdate.setImage(uploadResult.get("url").toString());
+                foodUpdate.setCloudId(uploadResult.get("public_id").toString());
+            }
+
+            Food foodUpdated = foodRepository.save(foodUpdate);
+            if(foodUpdated != null){
+                result.setData(foodUpdated);
+            }
+        }catch (Exception ex){
+            result.setMessageError(messageManager.getMessage("ERR0000", null));
+        }
+        return result;
     }
 
     @Override
