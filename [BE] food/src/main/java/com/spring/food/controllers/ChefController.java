@@ -47,4 +47,10 @@ public class ChefController {
         ServiceResponse<Object> resultFetch = chefService.getAllChef();
         return  ResponseUtils.getResponse(resultFetch);
     }
+
+    @GetMapping("/chef/fetch-detail/{id}")
+    public ResponseEntity<ResponseData> getDetail(@PathVariable("id") String chefId){
+        ServiceResponse<Chef> resultDetail = chefService.fetchDetail(chefId);
+        return ResponseUtils.getResponse(resultDetail);
+    }
 }

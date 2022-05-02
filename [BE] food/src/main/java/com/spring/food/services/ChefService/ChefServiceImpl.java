@@ -146,6 +146,16 @@ public class ChefServiceImpl implements ChefService{
     }
 
     @Override
+    public ServiceResponse<Chef> fetchDetail(String chefId) {
+        ServiceResponse<Chef> result = new ServiceResponse<>();
+        Optional<Chef> chefOptional = chefRepository.findById(chefId);
+        if(chefOptional.isPresent()){
+            result.setData(chefOptional.get());
+        }
+        return result;
+    }
+
+    @Override
     public ServiceResponse<Chef> updateChef(String chefId, ChefDTO chef) {
         ServiceResponse<Chef> result = new ServiceResponse<>();
 

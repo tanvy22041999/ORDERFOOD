@@ -15,4 +15,6 @@ public interface ChefService {
     ServiceResponse<Object> getAllChef();
 
     ServiceResponse<Chef> uploadImage(String chefId, MultipartFile image);
+
+    ServiceResponse<Chef> fetchDetail(String chefId);
 }
