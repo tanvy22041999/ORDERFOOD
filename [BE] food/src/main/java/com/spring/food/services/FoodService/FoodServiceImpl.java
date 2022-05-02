@@ -1,6 +1,7 @@
 package com.spring.food.services.FoodService;
 
 import com.spring.food.commons.CloudinaryService;
+import com.spring.food.commons.CurrencyCommon;
 import com.spring.food.commons.MessageManager;
 import com.spring.food.comstants.SystemConstants;
 import com.spring.food.dtos.FoodDTO;
@@ -107,6 +108,8 @@ public class FoodServiceImpl implements FoodService{
             foodSave.setTypeId(food.getTypeId());
             foodSave.setChefId(food.getChefId());
             foodSave.setDescription(food.getDescription());
+            foodSave.setPrice(food.getPrice());
+            foodSave.setPriceString(CurrencyCommon.priceToString(food.getPrice()));
             if(food.getImage() != null){
                 Map uploadResult = cloudinaryService.uploadImageProduct(food.getImage());
 
@@ -147,6 +150,8 @@ public class FoodServiceImpl implements FoodService{
             foodUpdate.setTypeId(food.getTypeId());
             foodUpdate.setChefId(food.getChefId());
             foodUpdate.setDescription(food.getDescription());
+            foodUpdate.setPrice(food.getPrice());
+            foodUpdate.setPriceString(CurrencyCommon.priceToString(food.getPrice()));
             if(food.getImage() != null){
                 Map uploadResult = cloudinaryService.uploadImageProduct(food.getImage());
 
@@ -209,11 +214,51 @@ public class FoodServiceImpl implements FoodService{
 
     @Override
     public ServiceResponse<Food> turnOnOutStock(String foodId) {
-        return null;
+        ServiceResponse<Food> result = new ServiceResponse<>();
+
+        try{
+            String error = this.logicCheckDelete(foodId);
+            if(!"".equals(error)){
+                result.setMessageError(error);
+                return result;
+            }
+
+            Optional<Food> food = foodRepository.findById(foodId);
+            Food foodUpdate = food.get();
+            foodUpdate.setOutOfStock(SystemConstants.OUT_STOCK_ON);
+            Food foodUpdated = foodRepository.save(foodUpdate);
+            if(foodUpdated != null){
+                result.setData(foodUpdated);
+            }
+        }
+        catch (Exception ex){
+            result.setMessageError(messageManager.getMessage("ERR0000", null));
+        }
+        return result;
     }
 
     @Override
-    public ServiceResponse<Food> turnOfOutStock(String foodId) {
-        return null;
+    public ServiceResponse<Food> turnOffOutStock(String foodId) {
+        ServiceResponse<Food> result = new ServiceResponse<>();
+
+        try{
+            String error = this.logicCheckDelete(foodId);
+            if(!"".equals(error)){
+                result.setMessageError(error);
+                return result;
+            }
+
+            Optional<Food> food = foodRepository.findById(foodId);
+            Food foodUpdate = food.get();
+            foodUpdate.setOutOfStock(SystemConstants.OUT_STOCK_OFF);
+            Food foodUpdated = foodRepository.save(foodUpdate);
+            if(foodUpdated != null){
+                result.setData(foodUpdated);
+            }
+        }
+        catch (Exception ex){
+            result.setMessageError(messageManager.getMessage("ERR0000", null));
+        }
+        return result;
     }
 }

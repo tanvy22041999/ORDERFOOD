@@ -19,7 +19,7 @@ public class FoodDTO {
 
     private String description;
 
-    private BigDecimal price;
+    private Double price;
 
     private boolean outOfStock;
 }

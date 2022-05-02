@@ -34,7 +34,9 @@ public class Food {
 
     private String description;
 
-    private BigDecimal price;
+    private Double price;
+
+    private String priceString;
 
     private boolean outOfStock;
 

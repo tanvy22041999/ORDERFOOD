@@ -41,4 +41,16 @@ public class FoodController {
         return  ResponseUtils.getResponse(resultFetch);
     }
 
+    @PostMapping("/admin/food/turn-out-stock-on/{id}")
+    public ResponseEntity<ResponseData> turnOutStockOn(@PathVariable("id") String foodId){
+        ServiceResponse<Food> resultTurn = foodService.turnOnOutStock(foodId);
+        return ResponseUtils.getResponse(resultTurn);
+    }
+
+    @PostMapping("/admin/food/turm-out-stock-off/{id}")
+    public ResponseEntity<ResponseData> turnOutStockOff(@PathVariable("id") String foodId){
+        ServiceResponse<Food> resultTurn = foodService.turnOffOutStock(foodId);
+        return ResponseUtils.getResponse(resultTurn);
+    }
+
 }

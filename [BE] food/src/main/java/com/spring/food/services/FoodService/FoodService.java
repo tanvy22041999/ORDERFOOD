@@ -15,5 +15,5 @@ public interface FoodService {
 
     ServiceResponse<Food> turnOnOutStock(String foodId);
 
-    ServiceResponse<Food> turnOfOutStock(String foodId);
+    ServiceResponse<Food> turnOffOutStock(String foodId);
 }
