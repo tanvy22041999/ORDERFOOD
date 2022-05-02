@@ -10,6 +10,7 @@ import org.joda.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -27,6 +28,21 @@ public class PromotionServiceImpl implements PromotionService{
 
         if(promotion.getPromotionPercent() == null || promotion.getPromotionPercent() <=0 || promotion.getPromotionPercent() > 100){
             return messageManager.getMessage("ERR0016", null);
+        }
+        return "";
+    }
+
+    private String logicCheckUpdate(String promotionId, PromotionDTO promotion){
+        if(!promotionRepository.existsById(promotionId)){
+            return messageManager.getMessage("ERR0006", null);
+        }
+
+        return this.logicCheckCreate(promotion);
+    }
+
+    private String logicCheckDelete(String promotionId){
+        if(!promotionRepository.existsById(promotionId)){
+            return messageManager.getMessage("ERR0006", null);
         }
         return "";
     }
@@ -61,12 +77,49 @@ public class PromotionServiceImpl implements PromotionService{
 
     @Override
     public ServiceResponse<Promotion> update(String promotionId, PromotionDTO promotion) {
-        return null;
+        ServiceResponse<Promotion> result = new ServiceResponse<>();
+        try{
+            String error = this.logicCheckUpdate(promotionId, promotion);
+            if(!"".equals(error)){
+                result.setMessageError(error);
+                return result;
+            }
+
+            Optional<Promotion> promotionOptional = promotionRepository.findById(promotionId);
+            Promotion promotionUpdate = promotionOptional.get();
+            promotionUpdate.setExpriedDate(promotion.getExpriedDate());
+            promotionUpdate.setPromotionPercent(promotion.getPromotionPercent());
+            Promotion promotionUpdated = promotionRepository.save(promotionUpdate);
+            if(promotionUpdated != null){
+                result.setData(promotionUpdated);
+            }
+        }
+        catch (Exception ex){
+            result.setMessageError(messageManager.getMessage("ERR0000", null));
+        }
+        return result;
     }
 
     @Override
     public ServiceResponse<Promotion> delete(String promotionId) {
-        return null;
+        ServiceResponse<Promotion> result = new ServiceResponse<>();
+        try {
+            String error = this.logicCheckDelete(promotionId);
+            if (!"".equals(error)) {
+                result.setMessageError(error);
+                return result;
+            }
+
+            Optional<Promotion> promotionOptional = promotionRepository.findById(promotionId);
+            Promotion promotionUpdate = promotionOptional.get();
+            Promotion promotionUpdated = promotionRepository.save(promotionUpdate);
+            if (promotionUpdated != null) {
+                result.setData(promotionUpdated);
+            }
+        }catch (Exception ex){
+
+        }
+            return result;
     }
 
     @Override

@@ -8,10 +8,7 @@ import com.spring.food.entities.response.ResponseData;
 import com.spring.food.services.PromotionService.PromotionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/rest")
@@ -23,5 +20,11 @@ public class PromotionController {
     public ResponseEntity<ResponseData> addNew(@RequestBody PromotionDTO promotion){
         ServiceResponse<Promotion> resultAdd = promotionService.addNew(promotion);
         return ResponseUtils.getResponse(resultAdd);
+    }
+
+    @PutMapping("/admin/promotion/update/{id}")
+    public ResponseEntity<ResponseData> update(@PathVariable("id") String promotionId, @RequestBody PromotionDTO promotion){
+        ServiceResponse<Promotion> resultUpdate = promotionService.update(promotionId, promotion);
+        return ResponseUtils.getResponse(resultUpdate);
     }
 }
