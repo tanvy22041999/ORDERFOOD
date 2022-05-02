@@ -11,20 +11,32 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @Data
-@Document(collection = "chefs")
-public class Chef {
+@Document(collection = "foods")
+public class Food {
     @Id
+    private String foodId;
+
+    private String typeId;
+
     private String chefId;
 
-    private String chefName;
+    private String foodName;
 
-    private String img;
+    private String image;
 
     @JsonIgnore
-    private String cloud_id;
+    private String cloudId;
+
+    private String description;
+
+    private BigDecimal price;
+
+    private boolean outOfStock;
 
     private boolean delFlg;
 

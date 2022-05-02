@@ -17,26 +17,26 @@ public class ChefController {
     private ChefService chefService;
 
     @PostMapping(value = "/admin/chef/add-new")
-    public ResponseEntity<ResponseData> addNewType(@ModelAttribute() ChefDTO chef){
+    public ResponseEntity<ResponseData> addNew(@ModelAttribute() ChefDTO chef){
 
         ServiceResponse<Chef> resultSave = chefService.createChef(chef);
         return ResponseUtils.getResponse(resultSave);
     }
 
     @PostMapping("/admin/chef/update/{id}")
-    public  ResponseEntity<ResponseData> updateType(@PathVariable("id") String chefId, @RequestBody() ChefDTO chef){
+    public  ResponseEntity<ResponseData> update(@PathVariable("id") String chefId, @RequestBody() ChefDTO chef){
         ServiceResponse<Chef> resultUpdate = chefService.updateChef(chefId, chef);
         return ResponseUtils.getResponse(resultUpdate);
     }
 
     @PostMapping("/admin/chef/delete/{id}")
-    public  ResponseEntity<ResponseData> deleteType(@PathVariable("id") String chefId){
+    public  ResponseEntity<ResponseData> delete(@PathVariable("id") String chefId){
         ServiceResponse<Chef> resultDelete = chefService.deleteChef(chefId);
         return ResponseUtils.getResponse(resultDelete);
     }
 
     @GetMapping("/chef/fetch-all")
-    public  ResponseEntity<ResponseData> getAllType(){
+    public  ResponseEntity<ResponseData> getAll(){
         ServiceResponse<Object> resultFetch = chefService.getAllChef();
         return  ResponseUtils.getResponse(resultFetch);
     }

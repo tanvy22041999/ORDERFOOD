@@ -219,3 +219,280 @@ java.lang.NoSuchMethodError: javax.servlet.http.HttpServletRequest.getHttpServle
 2022-05-02 09:27:16 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
 2022-05-02 09:27:16 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2022-05-02 09:27:16 [SpringContextShutdownHook] INFO  org.mongodb.driver.connection - Closed connection [connectionId{localValue:7, serverValue:290687}] to foodstore-shard-00-02.gak0m.mongodb.net:27017 because the pool has been closed.
+2022-05-02 11:12:00 [main] INFO  com.spring.food.MainApplication - Starting MainApplication using Java 1.8.0_291 on Tuongs-MacBook-Pro.local with PID 11554 (/Users/devroot/Documents/codedoan/ORDERFOOD/[BE] food/target/classes started by devroot in /Users/devroot/Documents/codedoan/ORDERFOOD/[BE] food)
+2022-05-02 11:12:00 [main] INFO  com.spring.food.MainApplication - The following profiles are active: dev
+2022-05-02 11:12:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-05-02 11:12:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 6 MongoDB repository interfaces.
+2022-05-02 11:12:01 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@19058533' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-02 11:12:01 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-02 11:12:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-05-02 11:12:01 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-02 11:12:01 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2022-05-02 11:12:01 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-02 11:12:01 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1382 ms
+2022-05-02 11:12:02 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=foodstore.gak0m.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-4rzjqu-shard-0'}
+2022-05-02 11:12:02 [cluster-ClusterId{value='626f5a11a70b992fa02bf599', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-00.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 11:12:02 [cluster-ClusterId{value='626f5a11a70b992fa02bf599', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-01.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 11:12:02 [cluster-ClusterId{value='626f5a11a70b992fa02bf599', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-02.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 11:12:02 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-02 11:12:02 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-02 11:12:02 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/Users/devroot/m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/Users/devroot/m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'foodController' method 
+com.spring.food.controllers.FoodController#delete(String)
+to {POST [/rest/admin/chef/food/{id}]}: There is already 'foodController' bean method
+com.spring.food.controllers.FoodController#update(String, FoodDTO) mapped.
+2022-05-02 11:12:02 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2022-05-02 11:12:02 [main] ERROR o.a.c.c.C.[Tomcat].[localhost].[/] - Failed to destroy the filter named [Tomcat WebSocket (JSR356) Filter] of type [org.apache.tomcat.websocket.server.WsFilter]
+java.lang.AbstractMethodError: null
+	at org.apache.catalina.core.ApplicationFilterConfig.release(ApplicationFilterConfig.java:301)
+	at org.apache.catalina.core.StandardContext.filterStop(StandardContext.java:4598)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5425)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1400)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1389)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:976)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1400)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1389)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:976)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:498)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:982)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:496)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:149)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:769)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at com.spring.food.MainApplication.main(MainApplication.java:30)
+2022-05-02 11:12:02 [main] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='626f5a11a70b992fa02bf599', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.net.SocketInputStream.socketRead0(Native Method)
+ java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ java.net.SocketInputStream.read(SocketInputStream.java:171)
+ java.net.SocketInputStream.read(SocketInputStream.java:141)
+ sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475)
+ sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469)
+ sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:159)
+ sun.security.ssl.SSLTransport.decode(SSLTransport.java:110)
+ sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1290)
+ sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1199)
+ sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:401)
+ sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:819)
+ sun.security.ssl.SSLSocketImpl.access$200(SSLSocketImpl.java:75)
+ sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1104)
+ com.mongodb.internal.connection.SocketStream.write(SocketStream.java:99)
+ com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:494)
+ com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:328)
+ com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:278)
+ com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+ com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+ com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+ com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+ com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+ java.lang.Thread.run(Thread.java:748)
+2022-05-02 11:12:02 [main] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='626f5a11a70b992fa02bf599', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.net.SocketInputStream.socketRead0(Native Method)
+ java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ java.net.SocketInputStream.read(SocketInputStream.java:171)
+ java.net.SocketInputStream.read(SocketInputStream.java:141)
+ sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475)
+ sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469)
+ sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:159)
+ sun.security.ssl.SSLTransport.decode(SSLTransport.java:110)
+ sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1290)
+ sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1199)
+ sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:401)
+ sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:819)
+ sun.security.ssl.SSLSocketImpl.access$200(SSLSocketImpl.java:75)
+ sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1104)
+ com.mongodb.internal.connection.SocketStream.write(SocketStream.java:99)
+ com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:494)
+ com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:328)
+ com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:278)
+ com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+ com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+ com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+ com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+ com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+ java.lang.Thread.run(Thread.java:748)
+2022-05-02 11:12:02 [main] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='626f5a11a70b992fa02bf599', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.net.SocketInputStream.socketRead0(Native Method)
+ java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ java.net.SocketInputStream.read(SocketInputStream.java:171)
+ java.net.SocketInputStream.read(SocketInputStream.java:141)
+ sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:475)
+ sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:469)
+ sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:159)
+ sun.security.ssl.SSLTransport.decode(SSLTransport.java:110)
+ sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1290)
+ sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1199)
+ sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:401)
+ sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:819)
+ sun.security.ssl.SSLSocketImpl.access$200(SSLSocketImpl.java:75)
+ sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1104)
+ com.mongodb.internal.connection.SocketStream.write(SocketStream.java:99)
+ com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:494)
+ com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:328)
+ com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:278)
+ com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+ com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+ com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+ com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+ com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+ java.lang.Thread.run(Thread.java:748)
+2022-05-02 11:12:02 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-02 11:12:02 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/Users/devroot/m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/Users/devroot/m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'foodController' method 
+com.spring.food.controllers.FoodController#delete(String)
+to {POST [/rest/admin/chef/food/{id}]}: There is already 'foodController' bean method
+com.spring.food.controllers.FoodController#update(String, FoodDTO) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:769)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at com.spring.food.MainApplication.main(MainApplication.java:30)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/Users/devroot/m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'foodController' method 
+com.spring.food.controllers.FoodController#delete(String)
+to {POST [/rest/admin/chef/food/{id}]}: There is already 'foodController' bean method
+com.spring.food.controllers.FoodController#update(String, FoodDTO) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'foodController' method 
+com.spring.food.controllers.FoodController#delete(String)
+to {POST [/rest/admin/chef/food/{id}]}: There is already 'foodController' bean method
+com.spring.food.controllers.FoodController#update(String, FoodDTO) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 37 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'foodController' method 
+com.spring.food.controllers.FoodController#delete(String)
+to {POST [/rest/admin/chef/food/{id}]}: There is already 'foodController' bean method
+com.spring.food.controllers.FoodController#update(String, FoodDTO) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:662)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:628)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:328)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 51 common frames omitted
+2022-05-02 11:12:59 [main] INFO  com.spring.food.MainApplication - Starting MainApplication using Java 1.8.0_291 on Tuongs-MacBook-Pro.local with PID 11565 (/Users/devroot/Documents/codedoan/ORDERFOOD/[BE] food/target/classes started by devroot in /Users/devroot/Documents/codedoan/ORDERFOOD/[BE] food)
+2022-05-02 11:12:59 [main] INFO  com.spring.food.MainApplication - The following profiles are active: dev
+2022-05-02 11:13:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-05-02 11:13:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 6 MongoDB repository interfaces.
+2022-05-02 11:13:00 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@dab48d3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-02 11:13:00 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-02 11:13:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-05-02 11:13:00 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-02 11:13:00 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2022-05-02 11:13:00 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-02 11:13:00 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1242 ms
+2022-05-02 11:13:00 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=foodstore.gak0m.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-4rzjqu-shard-0'}
+2022-05-02 11:13:00 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-01.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 11:13:00 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-00.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 11:13:00 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-02.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 11:13:00 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-02 11:13:01 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-02 11:13:01 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-02 11:13:01 [cluster-rtt-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:294857}] to foodstore-shard-00-00.gak0m.mongodb.net:27017
+2022-05-02 11:13:01 [cluster-rtt-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:6, serverValue:294401}] to foodstore-shard-00-01.gak0m.mongodb.net:27017
+2022-05-02 11:13:01 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:4, serverValue:294858}] to foodstore-shard-00-00.gak0m.mongodb.net:27017
+2022-05-02 11:13:01 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=421056804, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-00.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=6268344064fb5c441adb1966, counter=4}, lastWriteDate=Mon May 02 11:13:01 ICT 2022, lastUpdateTimeNanos=138517552832152}
+2022-05-02 11:13:01 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:294401}] to foodstore-shard-00-01.gak0m.mongodb.net:27017
+2022-05-02 11:13:01 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=419916511, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-01.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=626834e5fb29ca26a850e2c5, counter=3}, lastWriteDate=Mon May 02 11:13:01 ICT 2022, lastUpdateTimeNanos=138517555117765}
+2022-05-02 11:13:01 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@126f8f24, org.springframework.security.web.context.SecurityContextPersistenceFilter@31834a2b, org.springframework.security.web.header.HeaderWriterFilter@39549f33, org.springframework.security.web.authentication.logout.LogoutFilter@4776e209, com.spring.food.securities.JwtTokenFilter@1fbf088b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22ead351, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51cab489, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35e98af, org.springframework.security.web.session.SessionManagementFilter@2f3928ac, org.springframework.security.web.access.ExceptionTranslationFilter@2c3158e0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79d7035]
+2022-05-02 11:13:01 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-02 11:13:01 [cluster-rtt-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:294187}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 11:13:01 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2022-05-02 11:13:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-02 11:13:01 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2022-05-02 11:13:01 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2022-05-02 11:13:01 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2022-05-02 11:13:02 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: addNewUsingPOST_1
+2022-05-02 11:13:02 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2022-05-02 11:13:02 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: getAllUsingGET_1
+2022-05-02 11:13:02 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2022-05-02 11:13:02 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: getInformationUserUsingGET_1
+2022-05-02 11:13:02 [main] INFO  com.spring.food.MainApplication - Started MainApplication in 3.188 seconds (JVM running for 3.641)
+2022-05-02 11:13:02 [main] INFO  org.mongodb.driver.cluster - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=421056804, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-00.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=6268344064fb5c441adb1966, counter=4}, lastWriteDate=Mon May 02 11:13:01 ICT 2022, lastUpdateTimeNanos=138517552832152}, ServerDescription{address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=419916511, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-01.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=626834e5fb29ca26a850e2c5, counter=3}, lastWriteDate=Mon May 02 11:13:01 ICT 2022, lastUpdateTimeNanos=138517555117765}, ServerDescription{address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2022-05-02 11:13:03 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:5, serverValue:294335}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 11:13:03 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1976284329, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-02.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000010, setVersion=2, topologyVersion=TopologyVersion{processId=62683492f66e7734bbf144ba, counter=6}, lastWriteDate=Mon May 02 11:13:02 ICT 2022, lastUpdateTimeNanos=138519112507613}
+2022-05-02 11:13:03 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Setting max election id to 7fffffff0000000000000010 from replica set primary foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 11:13:03 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Setting max set version to 2 from replica set primary foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 11:13:03 [cluster-ClusterId{value='626f5a4c54da057dadabce33', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 11:13:05 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:7, serverValue:294360}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 11:14:08 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-02 11:14:08 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-02 11:14:08 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
