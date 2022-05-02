@@ -1808,3 +1808,6 @@ com.mongodb.MongoSocketReadException: Prematurely reached end of stream
 2022-05-02 21:52:49 [cluster-ClusterId{value='626ff03ede44986289022b91', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary foodstore-shard-00-02.gak0m.mongodb.net:27017
 2022-05-02 21:52:49 [cluster-rtt-ClusterId{value='626ff03ede44986289022b91', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:5, serverValue:311034}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
 2022-05-02 21:52:51 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:7, serverValue:311671}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 22:01:01 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2022-05-02 22:01:01 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-02 22:01:03 [SpringContextShutdownHook] INFO  org.mongodb.driver.connection - Closed connection [connectionId{localValue:7, serverValue:311671}] to foodstore-shard-00-02.gak0m.mongodb.net:27017 because the pool has been closed.
