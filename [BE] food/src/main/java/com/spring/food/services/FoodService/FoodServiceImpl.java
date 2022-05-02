@@ -213,6 +213,18 @@ public class FoodServiceImpl implements FoodService{
     }
 
     @Override
+    public ServiceResponse<Food> fetchDetail(String foodId) {
+        ServiceResponse<Food> result = new ServiceResponse<>();
+        Optional<Food> foodDetail = foodRepository.findById(foodId);
+        if(!foodDetail.isPresent()){
+            result.setMessageError(messageManager.getMessage("ERR0006", null));
+            return result;
+        }
+        result.setData(foodDetail.get());
+        return result;
+    }
+
+    @Override
     public ServiceResponse<Food> turnOnOutStock(String foodId) {
         ServiceResponse<Food> result = new ServiceResponse<>();
 

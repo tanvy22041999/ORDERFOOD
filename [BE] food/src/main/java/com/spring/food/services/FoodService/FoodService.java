@@ -13,6 +13,8 @@ public interface FoodService {
 
     ServiceResponse<Object> fetchAll();
 
+    ServiceResponse<Food> fetchDetail(String foodId);
+
     ServiceResponse<Food> turnOnOutStock(String foodId);
 
     ServiceResponse<Food> turnOffOutStock(String foodId);

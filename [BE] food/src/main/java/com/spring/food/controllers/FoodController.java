@@ -41,6 +41,12 @@ public class FoodController {
         return  ResponseUtils.getResponse(resultFetch);
     }
 
+    @GetMapping("/food/fetch-detail/{id}")
+    public ResponseEntity<ResponseData> getDetail(@PathVariable("id") String foodId){
+        ServiceResponse<Food> resultDetail = foodService.fetchDetail(foodId);
+        return ResponseUtils.getResponse(resultDetail);
+    }
+
     @PostMapping("/admin/food/turn-out-stock-on/{id}")
     public ResponseEntity<ResponseData> turnOutStockOn(@PathVariable("id") String foodId){
         ServiceResponse<Food> resultTurn = foodService.turnOnOutStock(foodId);

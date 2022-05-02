@@ -151,7 +151,7 @@
       <workItem from="1651036872575" duration="31000" />
       <workItem from="1651195202491" duration="6836000" />
       <workItem from="1651318466976" duration="19870000" />
-      <workItem from="1651458797495" duration="8761000" />
+      <workItem from="1651458797495" duration="9672000" />
     </task>
     <servers />
   </component>
@@ -182,11 +182,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/spring/food/MainApplication.java</url>
           <line>43</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring/food/controllers/FoodController.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

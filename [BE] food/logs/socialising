@@ -1203,3 +1203,300 @@ com.spring.food.controllers.FoodController#update(String, FoodDTO) mapped.
 2022-05-02 16:04:50 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
 2022-05-02 16:04:50 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2022-05-02 16:04:51 [SpringContextShutdownHook] INFO  org.mongodb.driver.connection - Closed connection [connectionId{localValue:7, serverValue:302770}] to foodstore-shard-00-02.gak0m.mongodb.net:27017 because the pool has been closed.
+2022-05-02 20:00:18 [main] INFO  com.spring.food.MainApplication - Starting MainApplication using Java 1.8.0_291 on Tuongs-MacBook-Pro.local with PID 12969 (/Users/devroot/Documents/codedoan/ORDERFOOD/[BE] food/target/classes started by devroot in /Users/devroot/Documents/codedoan/ORDERFOOD/[BE] food)
+2022-05-02 20:00:18 [main] INFO  com.spring.food.MainApplication - The following profiles are active: dev
+2022-05-02 20:00:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-05-02 20:00:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 6 MongoDB repository interfaces.
+2022-05-02 20:00:20 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@174e1b69' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-02 20:00:20 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-02 20:00:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-05-02 20:00:20 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-02 20:00:20 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2022-05-02 20:00:20 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-02 20:00:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1353 ms
+2022-05-02 20:00:20 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=foodstore.gak0m.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-4rzjqu-shard-0'}
+2022-05-02 20:00:21 [cluster-ClusterId{value='626fd5e4b687997721da7ef7', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-01.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 20:00:21 [cluster-ClusterId{value='626fd5e4b687997721da7ef7', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-00.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 20:00:21 [cluster-ClusterId{value='626fd5e4b687997721da7ef7', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-02.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 20:00:21 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-02 20:00:21 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-02 20:00:21 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-02 20:00:21 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67688110, org.springframework.security.web.context.SecurityContextPersistenceFilter@626e0c86, org.springframework.security.web.header.HeaderWriterFilter@7418d76e, org.springframework.security.web.authentication.logout.LogoutFilter@237add, com.spring.food.securities.JwtTokenFilter@1943c1f2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2dd1086, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7cf63b9a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d293993, org.springframework.security.web.session.SessionManagementFilter@6ee88e21, org.springframework.security.web.access.ExceptionTranslationFilter@22ead351, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58278366]
+2022-05-02 20:00:22 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-02 20:00:22 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2022-05-02 20:00:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-02 20:00:22 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2022-05-02 20:00:22 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2022-05-02 20:00:22 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2022-05-02 20:00:22 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: addNewUsingPOST_1
+2022-05-02 20:00:22 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2022-05-02 20:00:22 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: getAllUsingGET_1
+2022-05-02 20:00:22 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2022-05-02 20:00:22 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: addNewUsingPOST_2
+2022-05-02 20:00:22 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: getInformationUserUsingGET_1
+2022-05-02 20:00:22 [main] INFO  com.spring.food.MainApplication - Started MainApplication in 3.9 seconds (JVM running for 4.527)
+2022-05-02 20:00:22 [main] INFO  org.mongodb.driver.cluster - No server chosen by com.mongodb.client.internal.MongoClientDelegate$1@7de35070 from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2022-05-02 20:00:22 [cluster-ClusterId{value='626fd5e4b687997721da7ef7', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server foodstore-shard-00-01.gak0m.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+2022-05-02 20:00:23 [cluster-ClusterId{value='626fd5e4b687997721da7ef7', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server foodstore-shard-00-00.gak0m.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+2022-05-02 20:00:24 [cluster-ClusterId{value='626fd5e4b687997721da7ef7', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server foodstore-shard-00-02.gak0m.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+2022-05-02 20:00:52 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-02 20:00:52 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:809)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:790)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at com.spring.food.MainApplication.main(MainApplication.java:30)
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches com.mongodb.client.internal.MongoClientDelegate$1@7de35070. Client view of cluster state is {type=REPLICA_SET, servers=[{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}, {address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}, {address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches com.mongodb.client.internal.MongoClientDelegate$1@7de35070. Client view of cluster state is {type=REPLICA_SET, servers=[{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}, {address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}, {address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:95)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2881)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:563)
+	at org.springframework.data.mongodb.core.MongoTemplate.doCount(MongoTemplate.java:1133)
+	at org.springframework.data.mongodb.core.MongoTemplate.count(MongoTemplate.java:1123)
+	at org.springframework.data.mongodb.core.MongoTemplate.count(MongoTemplate.java:1106)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.count(SimpleMongoRepository.java:144)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:524)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:531)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:156)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:131)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy85.count(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy85.count(Unknown Source)
+	at com.spring.food.services.AccountService.AccountServiceImpl.count(AccountServiceImpl.java:48)
+	at com.spring.food.MainApplication.run(MainApplication.java:35)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:806)
+	... 5 common frames omitted
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches com.mongodb.client.internal.MongoClientDelegate$1@7de35070. Client view of cluster state is {type=REPLICA_SET, servers=[{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}, {address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}, {address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}]
+	at com.mongodb.internal.connection.BaseCluster.createTimeoutException(BaseCluster.java:407)
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:118)
+	at com.mongodb.internal.connection.AbstractMultiServerCluster.selectServer(AbstractMultiServerCluster.java:52)
+	at com.mongodb.client.internal.MongoClientDelegate.getConnectedClusterDescription(MongoClientDelegate.java:137)
+	at com.mongodb.client.internal.MongoClientDelegate.createClientSession(MongoClientDelegate.java:95)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.getClientSession(MongoClientDelegate.java:266)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:170)
+	at com.mongodb.client.internal.MongoCollectionImpl.executeCount(MongoCollectionImpl.java:223)
+	at com.mongodb.client.internal.MongoCollectionImpl.countDocuments(MongoCollectionImpl.java:192)
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$doCount$14(MongoTemplate.java:1134)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:561)
+	... 43 common frames omitted
+2022-05-02 20:00:52 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2022-05-02 20:00:52 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-02 20:02:23 [main] INFO  com.spring.food.MainApplication - Starting MainApplication using Java 1.8.0_291 on Tuongs-MacBook-Pro.local with PID 12988 (/Users/devroot/Documents/codedoan/ORDERFOOD/[BE] food/target/classes started by devroot in /Users/devroot/Documents/codedoan/ORDERFOOD/[BE] food)
+2022-05-02 20:02:23 [main] INFO  com.spring.food.MainApplication - The following profiles are active: dev
+2022-05-02 20:02:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-05-02 20:02:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 6 MongoDB repository interfaces.
+2022-05-02 20:02:25 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1639f93a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-02 20:02:25 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-02 20:02:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-05-02 20:02:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-02 20:02:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2022-05-02 20:02:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-02 20:02:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1283 ms
+2022-05-02 20:02:25 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=foodstore.gak0m.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-4rzjqu-shard-0'}
+2022-05-02 20:02:25 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-00.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 20:02:25 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-01.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 20:02:25 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-02.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 20:02:26 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-02 20:02:26 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-02 20:02:26 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-02 20:02:26 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7fbf26fc, org.springframework.security.web.context.SecurityContextPersistenceFilter@68af87ad, org.springframework.security.web.header.HeaderWriterFilter@44aa2e13, org.springframework.security.web.authentication.logout.LogoutFilter@5234b61a, com.spring.food.securities.JwtTokenFilter@58b5a2f3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9cfc77, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15e1f8fe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11c78080, org.springframework.security.web.session.SessionManagementFilter@44f0ff2b, org.springframework.security.web.access.ExceptionTranslationFilter@1f84327b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48cb2d73]
+2022-05-02 20:02:26 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-02 20:02:27 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2022-05-02 20:02:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-02 20:02:27 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2022-05-02 20:02:27 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2022-05-02 20:02:27 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2022-05-02 20:02:27 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: addNewUsingPOST_1
+2022-05-02 20:02:27 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2022-05-02 20:02:27 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: getAllUsingGET_1
+2022-05-02 20:02:27 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2022-05-02 20:02:27 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: addNewUsingPOST_2
+2022-05-02 20:02:27 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: getInformationUserUsingGET_1
+2022-05-02 20:02:27 [main] INFO  com.spring.food.MainApplication - Started MainApplication in 3.668 seconds (JVM running for 4.242)
+2022-05-02 20:02:27 [main] INFO  org.mongodb.driver.cluster - No server chosen by com.mongodb.client.internal.MongoClientDelegate$1@26874f2c from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2022-05-02 20:02:27 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server foodstore-shard-00-00.gak0m.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+2022-05-02 20:02:27 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server foodstore-shard-00-01.gak0m.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+2022-05-02 20:02:28 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server foodstore-shard-00-02.gak0m.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:648)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:513)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:356)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:280)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:107)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+2022-05-02 20:02:36 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:17, serverValue:310041}] to foodstore-shard-00-01.gak0m.mongodb.net:27017
+2022-05-02 20:02:36 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=394745175, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-01.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=626834e5fb29ca26a850e2c5, counter=3}, lastWriteDate=Mon May 02 20:02:36 ICT 2022, lastUpdateTimeNanos=146298275247505}
+2022-05-02 20:02:36 [main] INFO  org.mongodb.driver.cluster - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}, ServerDescription{address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=394745175, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-01.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=626834e5fb29ca26a850e2c5, counter=3}, lastWriteDate=Mon May 02 20:02:36 ICT 2022, lastUpdateTimeNanos=146298275247505}, ServerDescription{address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}]}. Waiting for 30000 ms before timing out
+2022-05-02 20:02:38 [cluster-rtt-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:23, serverValue:310046}] to foodstore-shard-00-01.gak0m.mongodb.net:27017
+2022-05-02 20:02:41 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:27, serverValue:310495}] to foodstore-shard-00-00.gak0m.mongodb.net:27017
+2022-05-02 20:02:41 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=358136816, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-00.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=6268344064fb5c441adb1966, counter=4}, lastWriteDate=Mon May 02 20:02:41 ICT 2022, lastUpdateTimeNanos=146303702462740}
+2022-05-02 20:02:43 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:28, serverValue:309032}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:02:43 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=384301177, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-02.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000010, setVersion=2, topologyVersion=TopologyVersion{processId=62683492f66e7734bbf144ba, counter=6}, lastWriteDate=Mon May 02 20:02:43 ICT 2022, lastUpdateTimeNanos=146305413084866}
+2022-05-02 20:02:43 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Setting max election id to 7fffffff0000000000000010 from replica set primary foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:02:43 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Setting max set version to 2 from replica set primary foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:02:43 [cluster-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:02:44 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:29, serverValue:308500}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:02:49 [cluster-rtt-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:30, serverValue:310502}] to foodstore-shard-00-00.gak0m.mongodb.net:27017
+2022-05-02 20:02:52 [cluster-rtt-ClusterId{value='626fd661490d761ff84cdc67', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:31, serverValue:308820}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:03:14 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2022-05-02 20:03:14 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-02 20:03:15 [SpringContextShutdownHook] INFO  org.mongodb.driver.connection - Closed connection [connectionId{localValue:29, serverValue:308500}] to foodstore-shard-00-02.gak0m.mongodb.net:27017 because the pool has been closed.
+2022-05-02 20:03:20 [main] INFO  com.spring.food.MainApplication - Starting MainApplication using Java 1.8.0_291 on Tuongs-MacBook-Pro.local with PID 12993 (/Users/devroot/Documents/codedoan/ORDERFOOD/[BE] food/target/classes started by devroot in /Users/devroot/Documents/codedoan/ORDERFOOD/[BE] food)
+2022-05-02 20:03:20 [main] INFO  com.spring.food.MainApplication - The following profiles are active: dev
+2022-05-02 20:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-05-02 20:03:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 6 MongoDB repository interfaces.
+2022-05-02 20:03:21 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@68f32020' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-02 20:03:21 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-02 20:03:21 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-05-02 20:03:21 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-02 20:03:21 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2022-05-02 20:03:21 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-02 20:03:21 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1122 ms
+2022-05-02 20:03:21 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=foodstore.gak0m.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-4rzjqu-shard-0'}
+2022-05-02 20:03:22 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-00.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 20:03:22 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-01.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 20:03:22 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-srv-foodstore.gak0m.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server foodstore-shard-00-02.gak0m.mongodb.net:27017 to client view of cluster
+2022-05-02 20:03:22 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-02 20:03:22 [main] WARN  o.s.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-02 20:03:22 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-02 20:03:22 [cluster-rtt-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:310515}] to foodstore-shard-00-00.gak0m.mongodb.net:27017
+2022-05-02 20:03:22 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:310515}] to foodstore-shard-00-00.gak0m.mongodb.net:27017
+2022-05-02 20:03:22 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-00.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=394853503, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-00.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=6268344064fb5c441adb1966, counter=4}, lastWriteDate=Mon May 02 20:03:22 ICT 2022, lastUpdateTimeNanos=146344579960332}
+2022-05-02 20:03:22 [cluster-rtt-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:6, serverValue:310064}] to foodstore-shard-00-01.gak0m.mongodb.net:27017
+2022-05-02 20:03:22 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:4, serverValue:310064}] to foodstore-shard-00-01.gak0m.mongodb.net:27017
+2022-05-02 20:03:22 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-01.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=408210382, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-01.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=626834e5fb29ca26a850e2c5, counter=3}, lastWriteDate=Mon May 02 20:03:22 ICT 2022, lastUpdateTimeNanos=146344606094510}
+2022-05-02 20:03:22 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4962b41e, org.springframework.security.web.context.SecurityContextPersistenceFilter@7418d76e, org.springframework.security.web.header.HeaderWriterFilter@5e1a986c, org.springframework.security.web.authentication.logout.LogoutFilter@50b734c4, com.spring.food.securities.JwtTokenFilter@11d045b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11ede87f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78d23d6a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fecf308, org.springframework.security.web.session.SessionManagementFilter@43d65a81, org.springframework.security.web.access.ExceptionTranslationFilter@7a83ccd2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@126f8f24]
+2022-05-02 20:03:22 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-02 20:03:23 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2022-05-02 20:03:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-02 20:03:23 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2022-05-02 20:03:23 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2022-05-02 20:03:23 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2022-05-02 20:03:23 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: addNewUsingPOST_1
+2022-05-02 20:03:23 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2022-05-02 20:03:23 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: getAllUsingGET_1
+2022-05-02 20:03:23 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2022-05-02 20:03:23 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: addNewUsingPOST_2
+2022-05-02 20:03:23 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: getInformationUserUsingGET_1
+2022-05-02 20:03:23 [main] INFO  com.spring.food.MainApplication - Started MainApplication in 3.328 seconds (JVM running for 3.799)
+2022-05-02 20:03:23 [main] INFO  org.mongodb.driver.cluster - No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=foodstore-shard-00-00.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=394853503, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-00.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=6268344064fb5c441adb1966, counter=4}, lastWriteDate=Mon May 02 20:03:22 ICT 2022, lastUpdateTimeNanos=146344579960332}, ServerDescription{address=foodstore-shard-00-01.gak0m.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=408210382, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-01.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=2, topologyVersion=TopologyVersion{processId=626834e5fb29ca26a850e2c5, counter=3}, lastWriteDate=Mon May 02 20:03:22 ICT 2022, lastUpdateTimeNanos=146344606094510}, ServerDescription{address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2022-05-02 20:03:30 [cluster-rtt-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:5, serverValue:308602}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:03:31 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:309093}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:03:31 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=foodstore-shard-00-02.gak0m.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=8915469254, setName='atlas-4rzjqu-shard-0', canonicalAddress=foodstore-shard-00-02.gak0m.mongodb.net:27017, hosts=[foodstore-shard-00-02.gak0m.mongodb.net:27017, foodstore-shard-00-00.gak0m.mongodb.net:27017, foodstore-shard-00-01.gak0m.mongodb.net:27017], passives=[], arbiters=[], primary='foodstore-shard-00-02.gak0m.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_NORTHEAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000010, setVersion=2, topologyVersion=TopologyVersion{processId=62683492f66e7734bbf144ba, counter=6}, lastWriteDate=Mon May 02 20:03:30 ICT 2022, lastUpdateTimeNanos=146353117885600}
+2022-05-02 20:03:31 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Setting max election id to 7fffffff0000000000000010 from replica set primary foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:03:31 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Setting max set version to 2 from replica set primary foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:03:31 [cluster-ClusterId{value='626fd69961cf9126637c47e0', description='null'}-foodstore-shard-00-02.gak0m.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:03:37 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:7, serverValue:309130}] to foodstore-shard-00-02.gak0m.mongodb.net:27017
+2022-05-02 20:04:28 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-02 20:04:28 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-02 20:04:28 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
